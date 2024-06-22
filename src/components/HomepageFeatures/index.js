@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import ScrollToTopButton from '../ScrollToTop/ScrollToTopButton';
 
 const FeatureList = [
   {
@@ -59,7 +60,7 @@ const FeatureList = [
     Svg: require('@site/static/img/hero_images/community_engagement.svg').default,
     description: (
       <>
-        Supportive community fostering interaction, collaboration, & learning
+        Supportive community fostering interaction, collaboration & learning
         through discussions & shared experiences among participants.
       </>
     ),
@@ -74,7 +75,7 @@ function Feature({ Svg, title, description }) {
           <Svg className={styles.featureSvg} role="img" />
         </div>
         <div className="text--center padding-horiz--md">
-          <Heading as="h3" className={styles.heading}>{title}</Heading>
+          <Heading as="h4" className={styles.heading}>{title}</Heading>
           <p>{description}</p>
         </div>
       </div>
@@ -91,6 +92,7 @@ export default function HomepageFeatures() {
             <Feature key={idx} {...props} />
           ))}
         </div>
+        <ScrollToTopButton />
       </div>
     </section>
   );
